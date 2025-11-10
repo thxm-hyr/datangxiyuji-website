@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>玄奘生平介绍</title>
+<style>
+  /* 页面全局样式 */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Microsoft YaHei", sans-serif;
+  }
+
+  /* 背景图固定 */
+  body {
+    background-image: url('xuanzangbanshen.jpg'); /* 替换为你的背景图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 背景固定 */
+  }
+
+  /* 返回首页按钮 */
+  #back-btn {
+    position: fixed; /* 固定在窗口位置 */
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    padding: 10px 16px;
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  #back-btn:hover {
+    background-color: rgba(230,230,230,0.9);
+  }
+
+  /* 内容容器 */
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  }
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin-bottom: 30px;
+  }
+</style>
+</head>
+<body>
+  <!-- 返回首页按钮 -->
+  <a href="index.html" id="back-btn">返回首页</a>
+
+  <div class="content">
+    <h1>玄奘其人</h1>
+    <p>玄奘（602—664），唐代高僧，著名旅行家、翻译家，佛学大师。他以西行取经著称，一生致力于佛教经典翻译和传播，留下了《大唐西域记》等重要作品。</p>
+    <p>少年时期聪慧过人，广泛研习佛教经典。成年后，毅然踏上前往天竺（印度）求取佛经的漫长旅程，历经艰险，穿越荒漠、雪山与重重边境。</p>
+    <p>归国后，玄奘在长安翻译佛经七十余部，影响深远。他所著《大唐西域记》详细记录了西域各国地理、风俗及佛教情况，是研究古代中亚与南亚的重要史料。</p>
+    <p>玄奘的精神影响了无数学者与旅行者，他的故事也成为《西游记》原型之一，至今为人们所敬仰与传颂。</p>
+    <p>后世多以“西行取经”为象征，寓意坚韧不拔、追求真理。他的生平与经历，为历史留下了宝贵的文化遗产。</p>
+  </div>
+</body>
+</html>

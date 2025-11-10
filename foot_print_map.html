@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大唐西域记 - 地图</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #map { height: 100vh; width: 100%; }
+    .legend { background: white; padding: 6px 8px; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+    .popup-title { font-weight: 700; margin-bottom: 4px; }
+    #back-btn {
+      position: absolute;
+      top: 10px; left: 100px;
+      z-index: 1000;
+      padding: 8px 12px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+    #back-btn:hover { background: #eee; }
+  </style>
+</head>
+<body>
+  <a href="index.html" id="back-btn">返回首页</a>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script>
+    var map = L.map('map', {
+      center: [35.0, 85.0],
+      zoom: 4,
+      minZoom: 2,
+      maxZoom: 18
+    });
+
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar'
+    }).addTo(map);
+
+    var markers = L.markerClusterGroup();
+    markers.addTo(map);
+
+    // 图例
+    var legend = L.control({position: 'bottomright'});
+    legend.onAdd = function(map) {
+      var div = L.DomUtil.create('div', 'legend');
+      div.innerHTML = '<b>大唐西域记图例</b><br>• 标记 = 历史站点<br>• 红线 = 西行路线';
+      return div;
+    };
+    legend.addTo(map);
+
+    async function loadData() {
+      const response = await fetch('data/tang-dynasty-route.json');
+      const routeData = await response.json();
+
+      routeData.pages.forEach(page => {
+        L.geoJSON(page.features, {
+          pointToLayer: function(feature, latlng) { return L.marker(latlng); },
+          onEachFeature: function(feature, layer) {
+            if(feature.properties && feature.properties.name) {
+              let html = '<div class="popup-title">' + feature.properties.name + '</div>';
+              if(feature.properties.era) html += '<div><strong>时期/类型：</strong>' + feature.properties.era + '</div>';
+              if(feature.properties.note) html += '<div>' + feature.properties.note + '</div>';
+              layer.bindPopup(html);
+            }
+            markers.addLayer(layer);
+          }
+        });
+      });
+
+      if(routeData.routes && routeData.routes.length > 0) {
+        const mainRoute = routeData.routes[0];
+        var poly = L.polyline(mainRoute.coordinates, { weight: 3, color: '#e74c3c', opacity: 0.8 }).addTo(map);
+        poly.bindPopup(mainRoute.description || '玄奘法师西行路线');
+      }
+
+      const bounds = markers.getBounds();
+      if(bounds.isValid()) map.fitBounds(bounds.pad(0.1));
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
