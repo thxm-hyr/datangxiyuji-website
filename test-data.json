@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "title": "大唐西域记路线数据",
+    "description": "玄奘法师《大唐西域记》记载的重要地点和路线",
+    "totalPages": 5,
+    "lastUpdated": "2025-01-01"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "title": "起点与关中地区",
+      "description": "长安及周边重要起点",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "长安（长安城）",
+            "era": "起点",
+            "period": "唐朝",
+            "note": "唐代首都，玄奘法师西行起点",
+            "category": "起点",
+            "importance": 5
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [108.9398, 34.3416]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "洛阳",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "唐代东都，重要政治文化中心",
+            "category": "起点",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [112.4536, 34.6836]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "凉州（武威）",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "丝绸之路重镇，西行重要节点",
+            "category": "起点",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [102.6422, 37.9284]
+          }
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "title": "河西走廊",
+      "description": "甘肃西部重要通道",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "敦煌",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "敦煌莫高窟与丝路要冲",
+            "category": "河西走廊",
+            "importance": 5
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [94.6627, 40.1421]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "酒泉",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "河西走廊重要城市",
+            "category": "河西走廊",
+            "importance": 3
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [98.4944, 39.7323]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "张掖",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "丝绸之路重镇",
+            "category": "河西走廊",
+            "importance": 3
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [100.4498, 38.9259]
+          }
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "title": "塔里木盆地",
+      "description": "新疆南部绿洲城邦",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "于阗（和田）",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "古代西域重要城镇，以玉石闻名",
+            "category": "塔里木盆地",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [79.9306, 37.1149]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "龟兹（库车）",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "西域佛教中心，龟兹乐舞闻名",
+            "category": "塔里木盆地",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [82.9620, 41.7167]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "疏勒（喀什）",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "丝绸之路西端重镇",
+            "category": "塔里木盆地",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [75.9898, 39.4674]
+          }
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "title": "中亚地区",
+      "description": "帕米尔高原以西地区",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "撒马尔罕",
+            "era": "西域",
+            "period": "唐朝",
+            "note": "中亚历史名城，丝绸之路枢纽",
+            "category": "中亚",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [66.9597, 39.6556]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "布哈拉",
+            "era": "西域",
+            "period": "唐朝",
+            "note": "中亚伊斯兰文化中心",
+            "category": "中亚",
+            "importance": 3
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [64.4220, 39.7759]
+          }
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "title": "印度次大陆",
+      "description": "玄奘法师到达的主要地区",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "那烂陀寺",
+            "era": "终点",
+            "period": "唐朝",
+            "note": "古印度佛教最高学府，玄奘法师学习之地",
+            "category": "印度",
+            "importance": 5
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [85.4411, 25.1368]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "name": "王舍城",
+            "era": "经停",
+            "period": "唐朝",
+            "note": "古印度摩羯陀国都城",
+            "category": "印度",
+            "importance": 4
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [85.4206, 25.0064]
+          }
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "name": "主要路线",
+      "description": "玄奘法师西行主要路线",
+      "coordinates": [
+        [34.3416, 108.9398],
+        [37.9284, 102.6422],
+        [40.1421, 94.6627],
+        [37.1149, 79.9306],
+        [41.7167, 82.9620],
+        [39.4674, 75.9898],
+        [39.6556, 66.9597],
+        [25.1368, 85.4411]
+      ]
+    }
+  ]
+}
